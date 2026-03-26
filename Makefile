@@ -21,7 +21,7 @@ GOOGLE_WORKSPACE_SKILLS := \
 	gws-drive \
 	gws-sheets
 
-.PHONY: ai bootstrap mise-package mise-install check check-context register
+.PHONY: ai bootstrap mise-package mise-install check check-context codex-context register
 .PHONY: agents-install agents agents-cli agents-skills extra-skills
 .PHONY: agents-skills-install agents-skills-list agents-skills-check-npx
 
@@ -38,6 +38,9 @@ check:
 
 check-context:
 	@./scripts/test-context.sh
+
+codex-context:
+	@./scripts/codex-context.sh
 
 mise-package:
 	@set -e; \
