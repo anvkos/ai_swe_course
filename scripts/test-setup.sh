@@ -199,16 +199,12 @@ section "Core toolchain (required)"
 check_command required "mise installed" mise --version
 check_command required "direnv installed" direnv version
 check_command required "gh installed" gh --version
-check_command required "gitleaks installed" gitleaks version
 check_command required "jq installed" jq --version
 check_command required "node installed" node --version
 check_command required "npx installed" npx --version
 check_port_selector
 check_direnv_port
 check_command required "ruby installed" ruby --version
-check_command required "tmux installed" tmux -V
-check_command required "yarn installed" yarn --version
-check_command required "zellij installed" zellij --version
 
 section "Agent CLIs (required)"
 check_command required "claude installed" claude --version
