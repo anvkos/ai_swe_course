@@ -7,6 +7,10 @@ ORIG_PATH="$PATH"
 PATH="${HOME}/.local/bin:/usr/local/bin:/opt/homebrew/bin:${PATH}"
 export PATH
 
+VERSION="${VERSION:-unknown}"
+
+printf 'ai-setup %s\n' "$VERSION"
+
 required_failures=0
 warnings=0
 

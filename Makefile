@@ -3,7 +3,7 @@
 BLUE := \033[0;34m
 NC := \033[0m
 PATH := $(HOME)/.local/bin:/usr/local/bin:/opt/homebrew/bin:$(PATH)
-VERSION ?= 0.1.2
+VERSION ?= 0.2.0
 
 NPM ?= mise exec -- npm
 CLAUDE ?= mise exec -- claude
@@ -41,7 +41,7 @@ version:
 	fi
 
 check:
-	@./scripts/test-setup.sh
+	@VERSION=$(VERSION) ./scripts/test-setup.sh
 
 extra-check:
 	@CLAUDE_MARKETPLACE_NAMES="$(CLAUDE_MARKETPLACE_NAMES)" \
